@@ -1,3 +1,4 @@
+import ContactUsSection from "@/components/ContactUsSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function NeurosciencePage() {
@@ -110,6 +111,7 @@ export default function NeurosciencePage() {
                 </div>
             </section>
 
+            <ContactUsSection />
             {/* Related Expertise */}
             <section className="py-20 px-6 bg-gray-50">
                 <div className="max-w-6xl mx-auto">

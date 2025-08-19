@@ -6,7 +6,7 @@ import contactusImage from "@/assets/contactus.png";
 
 const ContactUsSection: React.FC = () => {
     return (
-        <section className="relative bg-[#42138a] text-white py-30 overflow-hidden">
+        <section className="relative bg-[#42138a] text-white py-20 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
                 {/* Left Side Text */}
                 <div className="md:w-1/2 z-10">
