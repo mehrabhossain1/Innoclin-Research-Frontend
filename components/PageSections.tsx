@@ -86,7 +86,7 @@ export default function PageSections() {
                         </CardHeader>
                         <CardContent className="space-y-6">
                             <div>
-                                <h3 className="font-semibold">
+                                <h3 className="font-semibold text-blue-500">
                                     Oncology &amp; Hematology
                                 </h3>
                                 <p className="text-sm leading-relaxed text-gray-700">
@@ -95,7 +95,9 @@ export default function PageSections() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-semibold">Rare Disease</h3>
+                                <h3 className="font-semibold text-blue-500">
+                                    Rare Disease
+                                </h3>
                                 <p className="text-sm leading-relaxed text-gray-700">
                                     Applying rare neurodegenerative disease
                                     trial expertise for targeted, high-impact
@@ -103,14 +105,18 @@ export default function PageSections() {
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-semibold">Pediatrics</h3>
+                                <h3 className="font-semibold text-blue-500">
+                                    Pediatrics
+                                </h3>
                                 <p className="text-sm leading-relaxed text-gray-700">
                                     Designing and executing pediatric CNS
                                     studies with safety and precision.
                                 </p>
                             </div>
                             <div>
-                                <h3 className="font-semibold">Endocrinology</h3>
+                                <h3 className="font-semibold text-blue-500">
+                                    Endocrinology
+                                </h3>
                                 <p className="text-sm leading-relaxed text-gray-700">
                                     Leveraging metabolic and hormonal insights
                                     that intersect with neurological health.
