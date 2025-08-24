@@ -189,6 +189,15 @@ export default function OnocologyAndHeamtologyPageSection() {
                                 </p>
                             </div>
                         </CardContent>
+                        <CardHeader>
+                            <h3 className="font-normal text-gray-600">
+                                By integrating this interconnected knowledge, we
+                                design oncology and hematology trials that
+                                anticipate risks, improve efficiency, and
+                                deliver data that drives confident, timely
+                                decision-making.
+                            </h3>
+                        </CardHeader>
                     </Card>
                 </div>
             </div>
