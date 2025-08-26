@@ -1,20 +1,20 @@
 import ContactUsSection from "@/components/ContactUsSection";
 import PageHeading from "@/components/pages/PageHeading";
-import ConsultancyPageSection from "./ConsultancyPageSection";
+import StrategicalSupportPageSection from "./StrategicalSupportPageSection";
 
-export default function ConsultancyPage() {
+export default function StrategicalSupportPage() {
     return (
         <main className="flex flex-col">
             {/* Hero Section */}
             <PageHeading
-                title="Consultancy"
+                title="Strategical Support "
                 subtitle=""
                 bgImage="https://img.freepik.com/premium-photo/digital-brain-concept-cosmic-background_98396-118211.jpg?w=1480"
             />
 
             {/* Intro Section */}
 
-            <ConsultancyPageSection />
+            <StrategicalSupportPageSection />
             <ContactUsSection />
         </main>
     );
