@@ -1,6 +1,6 @@
-import PageHeading from "@/components/pages/PageHeading";
-import DermatologyPageSection from "../dermatology/DermatologyPageSection";
 import ContactUsSection from "@/components/ContactUsSection";
+import PageHeading from "@/components/pages/PageHeading";
+import PediatricsPageSection from "./PediatricsPageSection";
 
 export default function PediatricsPage() {
     return (
@@ -14,7 +14,7 @@ export default function PediatricsPage() {
 
             {/* Intro Section */}
 
-            <DermatologyPageSection />
+            <PediatricsPageSection />
             <ContactUsSection />
         </main>
     );
