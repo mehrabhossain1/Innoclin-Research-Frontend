@@ -65,7 +65,7 @@ export default function Navbar() {
                                     "Oncology & Hematology",
                                     "Cardiovascular",
                                     "Rare Disease",
-                                    "GI & Hepatology",
+                                    "Gastroenterology & Hepatology",
                                     "Nephrology",
                                     "Dermatology",
                                     "Ophthalmology",
