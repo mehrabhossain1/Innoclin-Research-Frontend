@@ -69,7 +69,7 @@ export default function Navbar() {
                                     "Nephrology",
                                     "Dermatology",
                                     "Ophthalmology",
-                                    "Respiratory",
+                                    "Respiratory Diseases",
                                     "Reproductive Health",
                                     "Endocrinology",
                                     "Pediatrics",
