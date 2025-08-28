@@ -18,18 +18,33 @@ export default function OurPartnerSection() {
     };
 
     return (
-        <section className="py-30 bg-primary/30">
-            <div className="container mx-auto px-4">
+        <section className="py-32 bg-gradient-to-r from-primary/50 via-white to-primary/10">
+            <div className="container mx-auto px-6">
                 {/* Section Title */}
-                <h2 className="text-3xl md:text-4xl font-normal text-center mb-30">
-                    Partnering for{" "}
-                    {/* <span className="text-primary">Breakthroughs</span> */}
-                    <span className="">Breakthroughs</span>
-                </h2>
+                <div className="text-center mb-16 ">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 inline-block relative">
+                        Partnering for{" "}
+                        <span className="text-primary">Breakthroughs</span>
+                        {/* Wave Line */}
+                        <svg
+                            className="absolute left-0 right-0 mx-auto -bottom-3 w-40 h-6 text-yellow-500"
+                            viewBox="0 0 180 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M2 10 C20 20, 40 0, 60 10 S100 20, 120 10 S160 0, 178 10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                                fill="transparent"
+                            />
+                        </svg>
+                    </h2>
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
                     {/* Right Video */}
-                    <div className="relative w-full h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
+                    <div className="relative w-full h-[310px] md:h-[310px] rounded-2xl overflow-hidden shadow-xl">
                         <video
                             ref={videoRef}
                             autoPlay
@@ -39,7 +54,7 @@ export default function OurPartnerSection() {
                             className="absolute inset-0 w-full h-full object-cover"
                         >
                             <source
-                                src="https://videocdn.cdnpk.net/videos/8d2d1ac4-654b-4334-aae5-4a9fd0a5904b/horizontal/previews/clear/large.mp4?token=exp=1755278121~hmac=c5247e388e044f25f0b0f76a1f28955ce606e58369f1754fa70186aa9d43696f"
+                                src="https://videocdn.cdnpk.net/videos/e4249499-66d4-44aa-abe0-4bc58f1a0174/horizontal/previews/clear/large.mp4?token=exp=1756385381~hmac=28e60e80fc231ebfe52bb10fe5b5b1d5f3978bea13eba75709a56f2a2cac267f"
                                 type="video/mp4"
                             />
                         </video>
@@ -58,8 +73,8 @@ export default function OurPartnerSection() {
                     </div>
 
                     {/* Left Content */}
-                    <div>
-                        <p className="text-gray-700 leading-relaxed">
+                    <div className="flex flex-col justify-center">
+                        <p className="text-gray-700 leading-relaxed text-lg mb-5">
                             At{" "}
                             <span className="text-primary font-semibold">
                                 Innoclin Research
@@ -74,7 +89,7 @@ export default function OurPartnerSection() {
                             risks, and deliver high-quality, reliable data that
                             accelerates your path to success.
                         </p>
-                        <p className="text-gray-700 leading-relaxed mt-4">
+                        <p className="text-gray-700 leading-relaxed text-lg">
                             Our proven expertise in executing complex trials and
                             our deep knowledge in key therapeutic areas provide
                             the valuable insights needed to power your next
