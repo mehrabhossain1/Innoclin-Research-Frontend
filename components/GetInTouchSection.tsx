@@ -7,35 +7,45 @@ export default function GetInTouchSection() {
     return (
         <section
             className={cn(
-                "w-full py-30 px-4 md:px-8 lg:px-30",
-                "bg-gradient-to-r from-primary/10 via-white to-secondary/10"
+                "w-full py-28 px-6 md:px-12 lg:px-20",
+                "bg-gradient-to-r from-yellow-50 via-white to-primary/50"
             )}
         >
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
                 {/* Left Side */}
-                <div>
-                    <h2 className="text-xl md:text-xl text-primary mb-4">
-                        GET IN TOUCH
+                <div className="space-y-6 text-center md:text-left">
+                    <h2 className="text-lg font-semibold text-primary tracking-widest uppercase">
+                        Get In Touch
                     </h2>
-                    <p className="text-4xl  text-gray-700 mb-6">
-                        Discover Advanced Clinical&apos;s Solutions.
+                    <p className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
+                        Discover{" "}
+                        <span className="text-primary">
+                            Advanced Clinical’s
+                        </span>{" "}
+                        Innovative Solutions
+                    </p>
+                    <p className="text-lg text-gray-600 max-w-lg">
+                        Let’s partner to accelerate clinical breakthroughs while
+                        ensuring safety, compliance, and world-class patient
+                        care. Our team is ready to support you every step of the
+                        way.
                     </p>
                     <Button
-                        variant="default"
-                        className="bg-primary text-white px-6 py-3 rounded-full shadow hover:bg-primary/90 transition"
+                        size="lg"
+                        className="bg-primary text-white px-8 py-4 rounded-full shadow-lg hover:bg-primary/90 transition"
                     >
                         Partner With Us
                     </Button>
                 </div>
 
                 {/* Right Side - Image */}
-                <div className="w-full h-full flex justify-center">
+                <div className="w-full h-full flex justify-center md:justify-end">
                     <Image
-                        src="https://img.freepik.com/free-photo/doctor-wearing-face-mask-hospital_23-2148728373.jpg?t=st=1755265429~exp=1755269029~hmac=97d7ba403df6c8d3236267511c7a96e5da25567832772023bef30bc6564feba4&w=1480"
+                        src="https://img.freepik.com/free-photo/biotechnology-scientist-researching-laboratory-using-microscope-typing-pc-chemist-examining-virus-evolution-using-high-tech-scientific-research-vaccine-development-against-covid19_482257-12812.jpg?t=st=1756387874~exp=1756391474~hmac=cbae7af6918adc63ab813c4820b92b8eac4bfa00aed06a9d69f620a10b1eca7d&w=1480"
                         alt="Get in touch"
-                        className="rounded-2xl shadow-lg object-cover w-full max-w-md"
-                        width={500}
-                        height={300}
+                        className="rounded-3xl shadow-2xl object-cover w-full max-w-2xl h-[420px]"
+                        width={650}
+                        height={480}
                     />
                 </div>
             </div>

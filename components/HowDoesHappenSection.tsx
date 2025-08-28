@@ -19,7 +19,7 @@ const steps = [
     {
         id: 3,
         icon: Clock3,
-        text: "Launch your trial on time",
+        text: "Launch your study on time",
     },
 ];
 
@@ -35,7 +35,7 @@ const HowDoesHappenSection: React.FC = () => {
                     We meet deadlines and enrollment milestones, time and time
                     and time again. In fact, you could say our obsession with
                     timelines is something of an unfair advantage. We’ve built a
-                    name by coming to the rescue when trials fall behind and
+                    name by coming to the rescue when studys fall behind and
                     sponsors have to start from scratch.{" "}
                     <strong>“We Can Do Hard Things”</strong> is one of our
                     rallying cries, and it’s true.
@@ -53,7 +53,7 @@ const HowDoesHappenSection: React.FC = () => {
                 </h3>
                 <p className="mb-10">
                     Here are 3 simple first steps on the way to a successful
-                    trial:
+                    study:
                 </p>
 
                 {/* Steps */}
