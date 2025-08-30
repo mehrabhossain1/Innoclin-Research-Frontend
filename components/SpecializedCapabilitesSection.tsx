@@ -1,15 +1,14 @@
 "use client";
-import React, { useState } from "react";
 import {
     ArrowRight,
-    Microscope,
-    Clipboard,
-    Users,
     Award,
+    Clipboard,
     Clock,
+    Microscope,
     Target,
-    CheckCircle,
+    Users
 } from "lucide-react";
+import { useState } from "react";
 
 const capabilityData = [
     {
@@ -167,7 +166,7 @@ export default function SpecializedCapabilitiesSection() {
                             Ready to Partner With Us?
                         </h3>
                         <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                            Let's discuss how our specialized capabilities can accelerate your research objectives 
+                            Let&apos;s discuss how our specialized capabilities can accelerate your research objectives 
                             and bring your innovations to market faster.
                         </p>
                         

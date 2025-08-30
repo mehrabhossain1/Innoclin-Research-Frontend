@@ -63,7 +63,7 @@ export default function OurCareersSection() {
                     
                     <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
                         Join a team of passionate professionals dedicated to advancing healthcare research 
-                        and making a difference in patients' lives worldwide.
+                        and making a difference in patients&apos; lives worldwide.
                     </p>
                 </div>
 
@@ -178,7 +178,7 @@ export default function OurCareersSection() {
                             </h3>
                             
                             <p className="text-lg text-slate-200 leading-relaxed">
-                                Be part of a dynamic team that's shaping the future of healthcare research. 
+                                Be part of a dynamic team that&apos;s shaping the future of healthcare research. 
                                 We offer an inclusive environment where innovation thrives and every team member 
                                 contributes to meaningful breakthroughs that improve patient lives.
                             </p>
