@@ -7,18 +7,19 @@ const features = [
     {
         icon: Award,
         title: "Excellence",
-        description: "Premier clinical research services with proven track record"
+        description:
+            "Premier clinical research services with proven track record",
     },
     {
         icon: Users,
         title: "Expertise",
-        description: "Deep domain knowledge across therapeutic areas"
+        description: "Deep domain knowledge across therapeutic areas",
     },
     {
         icon: Clock,
         title: "Efficiency",
-        description: "Streamlined processes that accelerate timelines"
-    }
+        description: "Streamlined processes that accelerate timelines",
+    },
 ];
 
 export default function AboutUsSection() {
@@ -40,17 +41,18 @@ export default function AboutUsSection() {
                         </span>
                         <div className="h-[3px] w-12 bg-gradient-to-r from-[#0A9B85] to-[#0CB39A] rounded-full"></div>
                     </div>
-                    
+
                     <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight text-gray-900">
                         Welcome to{" "}
                         <span className="bg-gradient-to-r from-[#0CB39A] via-[#0A9B85] to-[#089B7A] bg-clip-text text-transparent">
                             Innoclin Research
                         </span>
                     </h2>
-                    
+
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        A premier clinical research services and strategic resourcing organization, 
-                        dedicated to delivering exceptional clinical experiences.
+                        A premier clinical research services and strategic
+                        resourcing organization, dedicated to delivering
+                        exceptional clinical experiences.
                     </p>
                 </div>
 
@@ -64,22 +66,25 @@ export default function AboutUsSection() {
                                 <span className="font-bold text-[#0CB39A]">
                                     Innoclin Research
                                 </span>
-                                , we specialize in providing end-to-end Clinical Research
-                                Organization (CRO) solutions, Functional Service
-                                Provider (FSP) support, and Strategic Resourcing
-                                services that drive efficiency, accuracy, and value for
-                                both patients and sponsors throughout the clinical
+                                , we specialize in providing end-to-end Clinical
+                                Research Organization (CRO) solutions,
+                                Functional Service Provider (FSP) support, and
+                                Strategic Resourcing services that drive
+                                efficiency, accuracy, and value for both
+                                patients and sponsors throughout the clinical
                                 research journey.
                             </p>
 
                             <p className="text-lg text-gray-700 leading-relaxed">
-                                With deep expertise, we are committed to advancing the
-                                impact of clinical research — improving lives,
-                                accelerating breakthroughs, and ensuring every project
-                                reaches its full potential. Through transparent
-                                communication, forward-thinking strategies, and
-                                innovative solutions, we partner with our clients to
-                                achieve better outcomes and long-lasting success.
+                                With deep expertise, we are committed to
+                                advancing the impact of clinical research —
+                                improving lives, accelerating breakthroughs, and
+                                ensuring every project reaches its full
+                                potential. Through transparent communication,
+                                forward-thinking strategies, and innovative
+                                solutions, we partner with our clients to
+                                achieve better outcomes and long-lasting
+                                success.
                             </p>
                         </div>
 
@@ -95,8 +100,12 @@ export default function AboutUsSection() {
                                         <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#0CB39A] to-[#0A9B85] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                             <FeatureIcon className="w-6 h-6 text-white" />
                                         </div>
-                                        <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
-                                        <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
+                                        <h3 className="font-bold text-gray-900 mb-2">
+                                            {feature.title}
+                                        </h3>
+                                        <p className="text-sm text-gray-600 leading-relaxed">
+                                            {feature.description}
+                                        </p>
                                     </div>
                                 );
                             })}
@@ -120,31 +129,43 @@ export default function AboutUsSection() {
                                 fill
                                 className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                             />
-                            
+
                             {/* Image Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                            
+
                             {/* Floating Stats */}
                             <div className="absolute bottom-6 left-6 right-6">
                                 <div className="bg-white/90 backdrop-blur-md rounded-2xl p-4 border border-white/50">
                                     <div className="grid grid-cols-3 gap-4 text-center">
                                         <div>
-                                            <div className="text-2xl font-bold text-[#0CB39A]">500+</div>
-                                            <div className="text-xs text-gray-600 font-medium">Trials Completed</div>
+                                            <div className="text-2xl font-bold text-[#0CB39A]">
+                                                500+
+                                            </div>
+                                            <div className="text-xs text-gray-600 font-medium">
+                                                Trials Completed
+                                            </div>
                                         </div>
                                         <div>
-                                            <div className="text-2xl font-bold text-[#0CB39A]">50+</div>
-                                            <div className="text-xs text-gray-600 font-medium">Partners</div>
+                                            <div className="text-2xl font-bold text-[#0CB39A]">
+                                                50+
+                                            </div>
+                                            <div className="text-xs text-gray-600 font-medium">
+                                                Partners
+                                            </div>
                                         </div>
                                         <div>
-                                            <div className="text-2xl font-bold text-[#0CB39A]">25+</div>
-                                            <div className="text-xs text-gray-600 font-medium">Countries</div>
+                                            <div className="text-2xl font-bold text-[#0CB39A]">
+                                                25+
+                                            </div>
+                                            <div className="text-xs text-gray-600 font-medium">
+                                                Countries
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         {/* Decorative Elements */}
                         <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-[#0CB39A]/20 to-[#0A9B85]/20 rounded-full blur-xl"></div>
                         <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-r from-[#0A9B85]/20 to-[#089B7A]/20 rounded-full blur-xl"></div>
