@@ -1,13 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
 import {
     ArrowRight,
-    Play,
     Award,
-    Users,
     Globe,
-    ChevronDown,
+    Play,
+    Users
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const statsData = [
     { number: "500+", label: "Clinical Trials", icon: Award },
@@ -47,12 +46,7 @@ export default function HeroSection() {
         setIsVideoPlaying(!isVideoPlaying);
     };
 
-    const scrollToNextSection = () => {
-        const nextSection = document.querySelector('section:nth-of-type(2)');
-        if (nextSection) {
-            nextSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+    
 
     if (!mounted) return null;
 
@@ -69,7 +63,7 @@ export default function HeroSection() {
                 }`}
             >
                 <source
-                    src="/assets/hero_section_vdo.mp4"
+                    src="/hero_section_vdo.mp4"
                     type="video/mp4"
                 />
             </video>
