@@ -69,7 +69,7 @@ export default function HeroSection() {
                 }`}
             >
                 <source
-                    src="/assets/hero_section_vdo.mp4"
+                    src="/hero_section_vdo.mp4"
                     type="video/mp4"
                 />
             </video>
