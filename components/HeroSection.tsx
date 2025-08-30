@@ -47,6 +47,13 @@ export default function HeroSection() {
         setIsVideoPlaying(!isVideoPlaying);
     };
 
+    const scrollToNextSection = () => {
+        const nextSection = document.querySelector('section:nth-of-type(2)');
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     if (!mounted) return null;
 
     return (
@@ -62,7 +69,7 @@ export default function HeroSection() {
                 }`}
             >
                 <source
-                    src="https://videocdn.cdnpk.net/videos/eb22beeb-3a9b-43c6-bc91-ab9435b7c18e/horizontal/previews/clear/large.mp4?token=exp=1756390566~hmac=76eeef8ee83f53d296612a15c490b561944654d2dcc979c4e85a736412d9052b"
+                    src="/assets/hero_section_vdo.mp4"
                     type="video/mp4"
                 />
             </video>
@@ -86,8 +93,8 @@ export default function HeroSection() {
                 <div className="max-w-4xl text-left text-white space-y-8">
                     {/* Enhanced Subtitle with Animation */}
                     <div className="flex items-center gap-3 opacity-0 animate-slide-in-left">
-                        <div className="h-[3px] w-12 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
-                        <span className="uppercase tracking-[0.15em] text-sm font-bold text-blue-300 bg-blue-900/30 px-3 py-1 rounded-full backdrop-blur-sm">
+                        <div className="h-[3px] w-12 bg-gradient-to-r from-[#0CB39A] to-[#0A9B85] rounded-full"></div>
+                        <span className="uppercase tracking-[0.15em] text-sm font-bold text-[#0CB39A] bg-[#0CB39A]/20 px-3 py-1 rounded-full backdrop-blur-sm border border-[#0CB39A]/30">
                             Clinical Research Partner
                         </span>
                     </div>
@@ -95,7 +102,7 @@ export default function HeroSection() {
                     {/* Enhanced Title */}
                     <h1 className="text-5xl md:text-7xl font-black leading-[0.9] opacity-0 animate-slide-in-left-delayed">
                         <span className="block">Innovative</span>
-                        <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-[#0CB39A] via-[#0A9B85] to-[#089B7A] bg-clip-text text-transparent">
                             Healthcare Research
                         </span>
                         <span className="block text-4xl md:text-5xl font-semibold mt-2 text-slate-200">
@@ -108,7 +115,7 @@ export default function HeroSection() {
                         <p className="text-xl md:text-2xl leading-relaxed text-slate-100 max-w-3xl">
                             Innoclin Research is committed to solving the most
                             complex{" "}
-                            <span className="font-bold text-white bg-gradient-to-r from-blue-500/30 to-purple-500/30 px-2 py-1 rounded">
+                            <span className="font-bold text-white bg-gradient-to-r from-[#0CB39A]/30 to-[#0A9B85]/30 px-2 py-1 rounded">
                                 clinical development challenges
                             </span>{" "}
                             and accelerating potential healthcare solutions.
@@ -121,16 +128,16 @@ export default function HeroSection() {
 
                     {/* Enhanced CTA Section */}
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 opacity-0 animate-slide-in-left-delayed-3">
-                        <button className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+                        <button className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#0CB39A] to-[#0A9B85] hover:from-[#0A9B85] hover:to-[#089B7A] text-white font-bold px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
                             <span>Start Your Project</span>
                             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
                         </button>
 
                         <button
                             onClick={toggleVideo}
-                            className="group inline-flex items-center gap-3 text-white hover:text-blue-300 font-semibold transition-colors duration-300"
+                            className="group inline-flex items-center gap-3 text-white hover:text-[#0CB39A] font-semibold transition-colors duration-300"
                         >
-                            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                            <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-[#0CB39A]/30 transition-all duration-300 border border-white/30 group-hover:border-[#0CB39A]/50">
                                 <Play className="w-5 h-5 ml-0.5" />
                             </div>
                             <span>Watch Our Story</span>
@@ -148,7 +155,7 @@ export default function HeroSection() {
                             return (
                                 <div
                                     key={index}
-                                    className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 opacity-0 animate-slide-in-up"
+                                    className="text-center p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 opacity-0 animate-slide-in-up hover:bg-white/15 transition-all duration-300"
                                     style={{
                                         animationDelay: `${
                                             1000 + index * 200
@@ -157,7 +164,7 @@ export default function HeroSection() {
                                     }}
                                 >
                                     <div className="flex items-center justify-center mb-2">
-                                        <StatIcon className="w-6 h-6 text-blue-300 mr-2" />
+                                        <StatIcon className="w-6 h-6 text-[#0CB39A] mr-2" />
                                         <span className="text-3xl font-bold text-white">
                                             {stat.number}
                                         </span>
@@ -172,21 +179,7 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            {/* Scroll Indicator */}
-            <div
-                className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 opacity-0 animate-slide-in-up"
-                style={{
-                    animationDelay: "2000ms",
-                    animationFillMode: "forwards",
-                }}
-            >
-                <div className="flex flex-col items-center text-white/70 hover:text-white transition-colors duration-300 cursor-pointer">
-                    <span className="text-sm font-medium mb-2">
-                        Scroll to explore
-                    </span>
-                    <ChevronDown className="w-6 h-6 animate-bounce" />
-                </div>
-            </div>
+    
 
             <style jsx>{`
                 @keyframes slide-in-left {
