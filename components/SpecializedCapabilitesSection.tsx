@@ -94,7 +94,7 @@ export default function SpecializedCapabilitiesSection() {
 
                 {/* Enhanced Cards Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-                    {capabilityData.map((capability, index) => {
+                    {capabilityData.map((capability) => {
                         return (
                             <div
                                 key={capability.id}
@@ -212,7 +212,7 @@ export default function SpecializedCapabilitiesSection() {
                         Ready to Partner With Us?
                     </h3>
                     <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-                        Let's discuss how our specialized capabilities can
+                        Let&apos;s discuss how our specialized capabilities can
                         accelerate your research objectives and bring your
                         innovations to market faster.
                     </p>
