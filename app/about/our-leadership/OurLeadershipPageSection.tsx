@@ -115,9 +115,9 @@ export default function OurLeadershipPageSection() {
                                     as core strengths. We welcome professionals
                                     from all backgrounds, cultures, and
                                     perspectives, knowing that the richness of
-                                    our team&apos;s experience directly fuels our
-                                    ability to solve complex challenges for our
-                                    clients.
+                                    our team&apos;s experience directly fuels
+                                    our ability to solve complex challenges for
+                                    our clients.
                                 </p>
                             </div>
                         </div>

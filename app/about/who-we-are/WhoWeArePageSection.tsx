@@ -86,8 +86,8 @@ export default function WhoWeArePageSection() {
                                 for innovation in clinical research delivering
                                 speed, precision, and reliability. We believe
                                 that fast, accurate, and high-quality research
-                                is vital to every product&apos;s success, and we are
-                                dedicated to being your trusted partner from
+                                is vital to every product&apos;s success, and we
+                                are dedicated to being your trusted partner from
                                 first idea to final approval.
                             </p>
                         </div>
