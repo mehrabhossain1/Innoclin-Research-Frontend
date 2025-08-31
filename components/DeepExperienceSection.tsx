@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
     ArrowRight,
     ChevronLeft,
@@ -16,7 +16,6 @@ import {
     Zap,
     Database,
     Award,
-    Search,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -186,9 +185,9 @@ const DeepExperienceSection: React.FC = () => {
     const cardsPerView = 3;
     const maxIndex = Math.max(0, services.length - cardsPerView);
 
-    const nextSlide = () => {
+    const nextSlide = useCallback(() => {
         setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    };
+    }, [maxIndex]);
 
     const prevSlide = () => {
         setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
@@ -202,7 +201,7 @@ const DeepExperienceSection: React.FC = () => {
             }, 3000); // 3 seconds
             return () => clearInterval(interval);
         }
-    }, [currentIndex, isHovered, maxIndex]);
+    }, [currentIndex, isHovered, maxIndex, nextSlide]);
 
     return (
         <section className="relative py-32 bg-gradient-to-br from-[#0CB39A] via-[#0A9B85] to-[#089B7A] overflow-hidden">

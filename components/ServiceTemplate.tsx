@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface ServiceFeature {
-    icon: React.ComponentType<any>;
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     title: string;
     description: string;
 }
@@ -20,7 +20,7 @@ interface ServiceSection {
 
 interface ServicePageProps {
     serviceName: string;
-    serviceIcon: React.ComponentType<any>;
+    serviceIcon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     heroTitle: string;
     heroSubtitle: string;
     sections: ServiceSection[];
@@ -37,7 +37,6 @@ export default function ServiceTemplate({
     sections,
     features,
     benefits,
-    backgroundImage,
 }: ServicePageProps) {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
