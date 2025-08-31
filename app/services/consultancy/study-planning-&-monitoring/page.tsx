@@ -15,7 +15,7 @@ export default function StudyPlanAndMonitoringPage() {
             {/* Intro Section */}
 
             <StudyPlanAndMonitoringPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

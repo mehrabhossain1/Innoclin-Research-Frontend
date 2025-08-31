@@ -15,7 +15,7 @@ export default function ConsultancyPage() {
             {/* Intro Section */}
 
             <ConsultancyPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

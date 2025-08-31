@@ -16,7 +16,7 @@ At Innoclin Research, we know infectious disease research requires speed, precis
             {/* Intro Section */}
 
             <InfectiousDiseasesPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

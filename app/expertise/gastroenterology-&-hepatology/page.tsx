@@ -16,7 +16,7 @@ At Innoclin Research, we understand that gastrointestinal (GI) and liver disorde
             {/* Intro Section */}
 
             <GastroenterologyAndHepatologyPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

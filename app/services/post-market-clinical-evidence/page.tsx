@@ -15,7 +15,7 @@ export default function MedicalWritingtPage() {
             {/* Intro Section */}
 
             <PostMarketClinicalEvidencePageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

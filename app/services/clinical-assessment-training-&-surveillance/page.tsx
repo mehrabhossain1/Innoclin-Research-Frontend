@@ -15,7 +15,7 @@ export default function ClinicalAssessmentPage() {
             {/* Intro Section */}
 
             <ClinicalAssessmentPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

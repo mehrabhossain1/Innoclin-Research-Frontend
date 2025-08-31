@@ -27,7 +27,7 @@ export default function Home() {
             <DeepExperienceSection />
             {/* <RareDiseasesSection /> */}
             <LifeSciencesSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </div>
     );
 }

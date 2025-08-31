@@ -15,7 +15,7 @@ export default function DermatologyPage() {
             {/* Intro Section */}
 
             <DermatologyPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

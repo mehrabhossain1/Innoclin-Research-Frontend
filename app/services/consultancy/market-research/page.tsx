@@ -15,7 +15,7 @@ export default function MarketResearchPage() {
             {/* Intro Section */}
 
             <MarketResearchPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

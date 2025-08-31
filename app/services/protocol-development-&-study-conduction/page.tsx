@@ -15,7 +15,7 @@ export default function AiPrinciplesPage() {
             {/* Intro Section */}
 
             <ProtocolDevPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

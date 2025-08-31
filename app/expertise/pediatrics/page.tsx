@@ -15,7 +15,7 @@ export default function PediatricsPage() {
             {/* Intro Section */}
 
             <PediatricsPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

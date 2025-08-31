@@ -15,7 +15,7 @@ export default function OphthalmologyPage() {
             {/* Intro Section */}
 
             <OphthalmologyPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

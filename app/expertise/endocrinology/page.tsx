@@ -15,7 +15,7 @@ export default function EndocrinologyPage() {
             {/* Intro Section */}
 
             <EndocrinologyPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

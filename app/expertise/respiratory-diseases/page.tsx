@@ -16,7 +16,7 @@ At Innoclin Research, we recognize the profound impact respiratory diseases have
             {/* Intro Section */}
 
             <RespiratoryDiseasesPageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

@@ -15,7 +15,7 @@ export default function SiteSuitabilityFeasibilityPage() {
             {/* Intro Section */}
 
             <SiteSuitabilityFeasibilitySection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

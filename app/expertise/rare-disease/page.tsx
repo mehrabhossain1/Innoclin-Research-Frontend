@@ -15,7 +15,7 @@ export default function RareDiseasePage() {
             {/* Intro Section */}
 
             <RareDiseasePageSection />
-            <ContactUsSection />
+            {/* <ContactUsSection /> */}
         </main>
     );
 }

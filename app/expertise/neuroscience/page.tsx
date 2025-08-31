@@ -1,7 +1,16 @@
 import ContactUsSection from "@/components/ContactUsSection";
 import PageHeading from "@/components/pages/PageHeading";
 import PageSections from "@/components/PageSections";
-import { Brain, Target, Users, Award, ArrowRight, Microscope, Activity, Shield } from "lucide-react";
+import {
+    Brain,
+    Target,
+    Users,
+    Award,
+    ArrowRight,
+    Microscope,
+    Activity,
+    Shield,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function NeurosciencePage() {
@@ -10,92 +19,106 @@ export default function NeurosciencePage() {
             icon: Brain,
             number: "150+",
             label: "Neurological Studies",
-            description: "Successfully completed trials"
+            description: "Successfully completed trials",
         },
         {
             icon: Users,
             number: "25,000+",
             label: "Patients Enrolled",
-            description: "Across global sites"
+            description: "Across global sites",
         },
         {
             icon: Target,
             number: "95%",
             label: "Success Rate",
-            description: "Trial completion rate"
+            description: "Trial completion rate",
         },
         {
             icon: Award,
             number: "15+",
             label: "Years Experience",
-            description: "In neuroscience research"
-        }
+            description: "In neuroscience research",
+        },
     ];
 
     const neurologicalDisorders = [
         {
             name: "Alzheimer's Disease",
-            description: "Comprehensive clinical trials for cognitive decline and memory disorders",
+            description:
+                "Comprehensive clinical trials for cognitive decline and memory disorders",
             icon: Brain,
-            color: "from-blue-500 to-blue-600"
+            color: "from-blue-500 to-blue-600",
         },
         {
             name: "Parkinson's Disease",
-            description: "Movement disorder research and therapeutic development",
+            description:
+                "Movement disorder research and therapeutic development",
             icon: Activity,
-            color: "from-green-500 to-green-600"
+            color: "from-green-500 to-green-600",
         },
         {
             name: "Multiple Sclerosis",
             description: "Autoimmune neurological condition treatment studies",
             icon: Shield,
-            color: "from-purple-500 to-purple-600"
+            color: "from-purple-500 to-purple-600",
         },
         {
             name: "Epilepsy",
             description: "Seizure disorder management and prevention trials",
             icon: Microscope,
-            color: "from-orange-500 to-orange-600"
+            color: "from-orange-500 to-orange-600",
         },
         {
             name: "Stroke Recovery",
             description: "Post-stroke rehabilitation and recovery research",
             icon: Brain,
-            color: "from-red-500 to-red-600"
+            color: "from-red-500 to-red-600",
         },
         {
             name: "Neuropathic Pain",
             description: "Chronic pain management and treatment studies",
             icon: Activity,
-            color: "from-indigo-500 to-indigo-600"
-        }
+            color: "from-indigo-500 to-indigo-600",
+        },
     ];
 
     const expertiseHighlights = [
         {
             title: "Specialized Expertise",
-            description: "Deep understanding of neurological disorders and their unique challenges",
+            description:
+                "Deep understanding of neurological disorders and their unique challenges",
             icon: Brain,
-            features: ["Neuroimaging expertise", "Cognitive assessment tools", "Biomarker development"]
+            features: [
+                "Neuroimaging expertise",
+                "Cognitive assessment tools",
+                "Biomarker development",
+            ],
         },
         {
             title: "Global Network",
-            description: "Access to specialized neurology centers and patient populations worldwide",
+            description:
+                "Access to specialized neurology centers and patient populations worldwide",
             icon: Users,
-            features: ["40+ countries", "500+ sites", "Diverse populations"]
+            features: ["40+ countries", "500+ sites", "Diverse populations"],
         },
         {
             title: "Regulatory Excellence",
-            description: "Proven track record with regulatory agencies for neurological drug approvals",
+            description:
+                "Proven track record with regulatory agencies for neurological drug approvals",
             icon: Award,
-            features: ["FDA submissions", "EMA approvals", "Global compliance"]
+            features: ["FDA submissions", "EMA approvals", "Global compliance"],
         },
         {
             title: "Technology Integration",
-            description: "Advanced digital tools and AI-powered solutions for neurological research",
+            description:
+                "Advanced digital tools and AI-powered solutions for neurological research",
             icon: Microscope,
-            features: ["Digital biomarkers", "AI analysis", "Remote monitoring"]
-        }
+            features: [
+                "Digital biomarkers",
+                "AI analysis",
+                "Remote monitoring",
+            ],
+        },
     ];
 
     return (
@@ -114,11 +137,15 @@ export default function NeurosciencePage() {
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             Proven Track Record in{" "}
-                            <span className="text-[#0CB39A]">Neuroscience Research</span>
+                            <span className="text-[#0CB39A]">
+                                Neuroscience Research
+                            </span>
                         </h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Our extensive experience in neurological clinical trials has established us as a trusted partner 
-                            for biopharmaceutical companies developing breakthrough treatments.
+                            Our extensive experience in neurological clinical
+                            trials has established us as a trusted partner for
+                            biopharmaceutical companies developing breakthrough
+                            treatments.
                         </p>
                     </div>
 
@@ -133,9 +160,15 @@ export default function NeurosciencePage() {
                                     <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#0CB39A] to-[#0A9B85] flex items-center justify-center">
                                         <StatIcon className="w-8 h-8 text-white" />
                                     </div>
-                                    <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                                    <div className="text-lg font-semibold text-[#0CB39A] mb-1">{stat.label}</div>
-                                    <div className="text-sm text-gray-600">{stat.description}</div>
+                                    <div className="text-3xl font-bold text-gray-900 mb-2">
+                                        {stat.number}
+                                    </div>
+                                    <div className="text-lg font-semibold text-[#0CB39A] mb-1">
+                                        {stat.label}
+                                    </div>
+                                    <div className="text-sm text-gray-600">
+                                        {stat.description}
+                                    </div>
                                 </div>
                             );
                         })}
@@ -149,11 +182,14 @@ export default function NeurosciencePage() {
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             Comprehensive Coverage of{" "}
-                            <span className="text-[#0CB39A]">Neurological Disorders</span>
+                            <span className="text-[#0CB39A]">
+                                Neurological Disorders
+                            </span>
                         </h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Our expertise spans the full spectrum of neurological conditions, from rare disorders 
-                            to common neurodegenerative diseases.
+                            Our expertise spans the full spectrum of
+                            neurological conditions, from rare disorders to
+                            common neurodegenerative diseases.
                         </p>
                     </div>
 
@@ -166,7 +202,9 @@ export default function NeurosciencePage() {
                                     className="group p-6 rounded-2xl border border-gray-200 hover:border-[#0CB39A] hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                                 >
                                     <div className="flex items-start gap-4">
-                                        <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${disorder.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                                        <div
+                                            className={`w-12 h-12 rounded-lg bg-gradient-to-r ${disorder.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                                        >
                                             <DisorderIcon className="w-6 h-6 text-white" />
                                         </div>
                                         <div className="flex-1">
@@ -191,11 +229,14 @@ export default function NeurosciencePage() {
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">
                             Why Choose Our{" "}
-                            <span className="text-[#0CB39A]">Neuroscience Expertise</span>
+                            <span className="text-[#0CB39A]">
+                                Neuroscience Expertise
+                            </span>
                         </h2>
                         <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                            Our specialized approach combines deep scientific knowledge with operational excellence 
-                            to deliver successful neurological clinical trials.
+                            Our specialized approach combines deep scientific
+                            knowledge with operational excellence to deliver
+                            successful neurological clinical trials.
                         </p>
                     </div>
 
@@ -212,17 +253,28 @@ export default function NeurosciencePage() {
                                             <HighlightIcon className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2">{highlight.title}</h3>
-                                            <p className="text-slate-300 leading-relaxed">{highlight.description}</p>
+                                            <h3 className="text-xl font-bold text-white mb-2">
+                                                {highlight.title}
+                                            </h3>
+                                            <p className="text-slate-300 leading-relaxed">
+                                                {highlight.description}
+                                            </p>
                                         </div>
                                     </div>
                                     <ul className="space-y-2">
-                                        {highlight.features.map((feature, featureIndex) => (
-                                            <li key={featureIndex} className="flex items-center gap-2 text-slate-300">
-                                                <div className="w-2 h-2 bg-[#0CB39A] rounded-full"></div>
-                                                <span className="text-sm">{feature}</span>
-                                            </li>
-                                        ))}
+                                        {highlight.features.map(
+                                            (feature, featureIndex) => (
+                                                <li
+                                                    key={featureIndex}
+                                                    className="flex items-center gap-2 text-slate-300"
+                                                >
+                                                    <div className="w-2 h-2 bg-[#0CB39A] rounded-full"></div>
+                                                    <span className="text-sm">
+                                                        {feature}
+                                                    </span>
+                                                </li>
+                                            )
+                                        )}
                                     </ul>
                                 </div>
                             );
@@ -236,11 +288,14 @@ export default function NeurosciencePage() {
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
                         Ready to Accelerate Your{" "}
-                        <span className="text-white">Neuroscience Research</span>
+                        <span className="text-white">
+                            Neuroscience Research
+                        </span>
                     </h2>
                     <p className="text-xl mb-8 max-w-3xl mx-auto">
-                        Partner with our neuroscience experts to navigate the complexities of neurological clinical trials 
-                        and bring breakthrough treatments to patients faster.
+                        Partner with our neuroscience experts to navigate the
+                        complexities of neurological clinical trials and bring
+                        breakthrough treatments to patients faster.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
@@ -262,8 +317,8 @@ export default function NeurosciencePage() {
             </section>
 
             <PageSections />
-            
-            <ContactUsSection />
+
+            {/* <ContactUsSection /> */}
         </main>
     );
 }
