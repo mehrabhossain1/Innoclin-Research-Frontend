@@ -1,5 +1,4 @@
 import { Brain, Target, TrendingUp, Zap } from "lucide-react";
-import ServiceTemplate from "@/components/ServiceTemplate";
 
 export default function StrategicalSupportPageSection() {
     const features = [
