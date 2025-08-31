@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import BlogsComponent from "@/components/pages/BlogComponent";
 import { TopNavbar } from "@/components/TopNavbar";
+import GetInTouchSection from "@/components/GetInTouchSection";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
                 <TopNavbar />
                 <Navbar />
                 {children}
+                <GetInTouchSection />
                 <BlogsComponent />
                 <Footer />
             </body>
