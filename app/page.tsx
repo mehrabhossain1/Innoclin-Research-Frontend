@@ -1,7 +1,5 @@
 import AboutUsSection from "@/components/AboutUsSection";
-import ContactUsSection from "@/components/ContactUsSection";
 import DeepExperienceSection from "@/components/DeepExperienceSection";
-import GetInTouchSection from "@/components/GetInTouchSection";
 import HeroSection from "@/components/HeroSection";
 import HowDoesHappenSection from "@/components/HowDoesHappenSection";
 import LifeSciencesSection from "@/components/LifeSciencesSection";
@@ -20,7 +18,7 @@ export default function Home() {
             <OurPartnerSection />
             <SpecializedCapabilitiesSection />
             <OurCareersSection />
-            <GetInTouchSection />
+            {/* <GetInTouchSection /> */}
             <WantACROPartnerSection />
             <HowDoesHappenSection />
             <TheInnoclinResearchDifferenceSection />

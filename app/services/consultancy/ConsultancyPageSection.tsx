@@ -1,111 +1,79 @@
-import Image from "next/image";
+"use client";
+
+import { Users, Target, Lightbulb, TrendingUp } from "lucide-react";
+import ServiceTemplate from "@/components/ServiceTemplate";
 
 export default function ConsultancyPageSection() {
+    const features = [
+        {
+            icon: Users,
+            title: "Expert Guidance",
+            description: "Decades of therapeutic and operational expertise",
+        },
+        {
+            icon: Target,
+            title: "Tailored Solutions",
+            description: "Customized strategies aligned with your study goals",
+        },
+        {
+            icon: Lightbulb,
+            title: "Strategic Innovation",
+            description: "Transform challenges into opportunities",
+        },
+        {
+            icon: TrendingUp,
+            title: "Proven Results",
+            description: "Save time, reduce costs, improve outcomes",
+        },
+    ];
+
+    const sections = [
+        {
+            title: "Guiding Clinical Development with Expertise and Clarity",
+            content: [
+                "Clinical research is complex, with sponsors often facing challenges in regulatory navigation, patient recruitment, protocol optimization, and operational efficiency. At Innoclin Research, our consultancy service is built to transform these challenges into opportunities by providing tailored solutions that align with your study goals.",
+                "Our consultants bring decades of therapeutic and operational expertise, combining deep scientific knowledge with practical strategies. From early-phase planning to late-stage execution, we analyze potential barriers, evaluate feasibility, and recommend approaches that streamline your development pathway. With a commitment to accuracy and transparency, we help you make confident decisions that save time, reduce costs, and improve trial outcomes.",
+                "Collaboration is at the core of our approach. We partner closely with sponsors, academic institutions, and biotech innovators, ensuring that every recommendation we provide is not only evidence-based but also adaptable to the realities of your study. By aligning global best practices with patient-centered strategies, Innoclin Research delivers consultancy that positions your clinical research for lasting success.",
+            ],
+            background: "white" as const,
+            image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        },
+        {
+            title: "Turning Complex Challenges into Clear Solutions",
+            content: [
+                "At Innoclin Research, we understand that clinical research comes with uncertainty. Our consultancy team is here to simplify complexity—helping you navigate regulations, optimize study design, and unlock smarter ways to bring therapies to patients. With a blend of scientific rigor and operational know-how, we deliver solutions that are strategic, adaptable, and results-driven.",
+                "From feasibility assessments to regulatory pathway design, our consultancy framework is built around your priorities. We don't just offer advice; we provide actionable roadmaps that anticipate challenges and create opportunities for success.",
+            ],
+            background: "gradient" as const,
+        },
+        {
+            title: "Strategic Guidance for Smarter, Faster Studies",
+            content: [
+                "Innoclin Research's consultancy service empowers sponsors with the insights needed to move research forward quickly and effectively. By combining therapeutic expertise, regulatory knowledge, and patient-centric planning, we ensure your trials are designed for both scientific excellence and operational feasibility.",
+                "With us, consultancy means more than guidance—it's a partnership built on innovation, transparency, and trust.",
+            ],
+            background: "white" as const,
+        },
+    ];
+
+    const benefits = [
+        "Regulatory navigation expertise",
+        "Protocol optimization strategies",
+        "Patient recruitment enhancement",
+        "Operational efficiency improvement",
+        "Risk mitigation planning",
+        "Cost reduction initiatives",
+    ];
+
     return (
-        <section className="bg-primary/20 py-24 px-6">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
-                {/* Left Column */}
-                <div className="lg:col-span-2 space-y-16">
-                    {/* Extensive Experience */}
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-primary">
-                            Guiding Clinical Development with Expertise and
-                            Clarity
-                        </h2>
-                        <p className="text-lg leading-relaxed mb-6">
-                            Clinical research is complex, with sponsors often
-                            facing challenges in regulatory navigation, patient
-                            recruitment, protocol optimization, and operational
-                            efficiency. At <b>Innoclin Research,</b> our
-                            consultancy service is built to transform these
-                            challenges into opportunities by providing tailored
-                            solutions that align with your study goals.
-                        </p>
-
-                        {/* Image between descriptions */}
-                        <div className="w-full h-72 relative rounded-2xl overflow-hidden shadow-md mb-6">
-                            <Image
-                                src="https://www.caidya.com/wp-content/uploads/2022/09/Cardiology-2-2048x1366.jpg" // replace with real image
-                                alt="Neuroscience research"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-
-                        <p className="text-lg leading-relaxed mb-6">
-                            Our consultants bring decades of therapeutic and
-                            operational expertise, combining deep scientific
-                            knowledge with practical strategies. From
-                            early-phase planning to late-stage execution, we
-                            analyze potential barriers, evaluate feasibility,
-                            and recommend approaches that streamline your
-                            development pathway. With a commitment to accuracy
-                            and transparency, we help you make confident
-                            decisions that save time, reduce costs, and improve
-                            trial outcomes.
-                        </p>
-                        <p className="text-lg leading-relaxed mb-6">
-                            Collaboration is at the core of our approach. We
-                            partner closely with sponsors, academic
-                            institutions, and biotech innovators, ensuring that
-                            every recommendation we provide is not only
-                            evidence-based but also adaptable to the realities
-                            of your study. By aligning global best practices
-                            with patient-centered strategies, Innoclin Research
-                            delivers consultancy that positions your clinical
-                            research for lasting success.
-                        </p>
-                    </div>
-
-                    {/* Accelerate Trial Start-up */}
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-primary">
-                            Turning Complex Challenges into Clear Solutions
-                        </h2>
-                        <p className="text-lg leading-relaxed mb-6">
-                            At Innoclin Research, we understand that clinical
-                            research comes with uncertainty. Our consultancy
-                            team is here to simplify complexity helping you
-                            navigate regulations, optimize study design, and
-                            unlock smarter ways to bring therapies to patients.
-                            With a blend of scientific rigor and operational
-                            know-how, we deliver solutions that are strategic,
-                            adaptable, and results-driven.
-                        </p>
-                        <p className="text-lg leading-relaxed mb-6">
-                            From feasibility assessments to regulatory pathway
-                            design, our consultancy framework is built around
-                            your priorities. We don’t just offer advice; we
-                            provide actionable roadmaps that anticipate
-                            challenges and create opportunities for success.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-primary">
-                            Strategic Guidance for Smarter, Faster Studies
-                        </h2>
-                        <p className="text-lg leading-relaxed mb-4">
-                            Innoclin Research’s consultancy service empowers
-                            sponsors with the insights needed to move research
-                            forward quickly and effectively. By combining
-                            therapeutic expertise, regulatory knowledge, and
-                            patient-centric planning, we ensure your trials are
-                            designed for both scientific excellence and
-                            operational feasibility.
-                        </p>
-                        <p className="text-lg leading-relaxed mb-4">
-                            With us, consultancy means more than guidance it’s a
-                            partnership built on innovation, transparency, and
-                            trust.
-                        </p>
-                    </div>
-
-                    {/* Insight-driven collaboration  */}
-                </div>
-
-                {/* Right Column - Sticky Related Expertise */}
-            </div>
-        </section>
+        <ServiceTemplate
+            serviceName="Consultancy Services"
+            serviceIcon={Users}
+            heroTitle="Expert Clinical Research Consultancy"
+            heroSubtitle="Transform clinical research challenges into opportunities with strategic guidance, regulatory expertise, and tailored solutions that accelerate your path to success."
+            sections={sections}
+            features={features}
+            benefits={benefits}
+        />
     );
 }

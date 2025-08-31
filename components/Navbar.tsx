@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -26,6 +27,19 @@ import { Button } from "@/components/ui/button";
 import Logo from "@/assets/Logo.png";
 
 export default function Navbar() {
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+    const handleMouseEnter = (dropdown: string) => {
+        setOpenDropdown(dropdown);
+    };
+
+    const handleMouseLeave = () => {
+        setOpenDropdown(null);
+    };
+
+    const closeDropdown = () => {
+        setOpenDropdown(null);
+    };
     const expertiseAreas = [
         {
             name: "Neuroscience",
@@ -96,70 +110,76 @@ export default function Navbar() {
 
     const services = [
         {
-            category: "Clinical Development",
+            category: "Strategic Services",
             items: [
                 {
-                    name: "Early Phase Development",
-                    description: "Phase I and II clinical trials",
+                    name: "Consultancy",
+                    description: "Expert guidance and strategic consulting",
                 },
                 {
-                    name: "Phase II/III Studies",
-                    description: "Advanced clinical trial phases",
+                    name: "Strategical Support",
+                    description: "Comprehensive strategic planning support",
                 },
                 {
-                    name: "Clinical Development Expertise",
-                    description: "End-to-end clinical development",
+                    name: "Study Planning & Monitoring",
+                    description: "End-to-end study oversight and management",
+                },
+                {
+                    name: "Market Research",
+                    description: "In-depth market analysis and insights",
                 },
             ],
         },
         {
-            category: "Clinical Operations & Delivery",
+            category: "Clinical Operations",
             items: [
                 {
-                    name: "Study Start-up",
-                    description: "Rapid trial initiation and setup",
+                    name: "Clinical Assessment, Training & Surveillance",
+                    description:
+                        "Comprehensive clinical oversight and training",
                 },
                 {
-                    name: "Patient Pathway & Feasibility",
-                    description: "Patient recruitment strategies",
+                    name: "Protocol Development & Study Conduction",
+                    description: "Protocol design and study execution",
+                },
+                {
+                    name: "Clinical Study Optimization",
+                    description: "Optimizing clinical trial efficiency",
+                },
+                {
+                    name: "Site Suitability & Feasibility",
+                    description: "Site selection and feasibility assessment",
                 },
             ],
         },
         {
-            category: "Regulatory Services & Surveillance",
+            category: "Regulatory & Documentation",
             items: [
-                {
-                    name: "Regulatory Services",
-                    description: "Compliance and approval support",
-                },
-                {
-                    name: "Pharmacovigilance",
-                    description: "Drug safety monitoring",
-                },
                 {
                     name: "Medical Writing",
-                    description: "Clinical documentation and reports",
+                    description: "Professional medical documentation",
+                },
+                {
+                    name: "Post-Market Clinical Evidence",
+                    description:
+                        "Post-market surveillance and evidence generation",
+                },
+                {
+                    name: "Grant Planning & Funding Strategy",
+                    description: "Grant applications and funding strategies",
                 },
             ],
         },
         {
-            category: "Data & Technology",
+            category: "Technology & Analytics",
             items: [
                 {
-                    name: "Biometrics and Biostatistics",
-                    description: "Statistical analysis and data science",
+                    name: "AI Principles in Clinical Research",
+                    description: "AI-driven research methodologies",
                 },
                 {
-                    name: "Clinical Analytics",
-                    description: "Advanced data analytics",
-                },
-                {
-                    name: "Clinical Data Management",
-                    description: "Comprehensive data handling",
-                },
-                {
-                    name: "Clinical Technology",
-                    description: "Technology solutions and platforms",
+                    name: "Clinical Data Analysis Solutions",
+                    description: "Advanced data analytics and insights",
                 },
             ],
         },
@@ -183,315 +203,343 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-8">
                         {/* About */}
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button
-                                    variant="ghost"
-                                    className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
-                                >
-                                    About
-                                    <ChevronDown className="w-4 h-4" />
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                                className="w-[400px] p-6"
-                                align="start"
+                        <div
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter("about")}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <Button
+                                variant="ghost"
+                                className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
                             >
-                                <div className="space-y-6">
-                                    <div>
-                                        <ul className="space-y-3">
-                                            <li>
-                                                <Link
-                                                    href="/about/who-we-are"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Who We Are
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/about/our-vision"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Our Vision
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/about/our-leadership"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Our Leadership
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
-
-                        {/* Services */}
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button
-                                    variant="ghost"
-                                    className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
-                                >
-                                    Services
-                                    <ChevronDown className="w-4 h-4" />
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                                className="w-[800px] p-6"
-                                align="start"
-                            >
-                                <div className="grid grid-cols-2 xl:grid-cols-4 gap-6">
-                                    {services.map((service, index) => (
-                                        <div key={index}>
-                                            <h3 className="text-lg font-bold text-gray-900 mb-4">
-                                                {service.category}
-                                            </h3>
+                                About
+                                <ChevronDown className="w-4 h-4" />
+                            </Button>
+                            {openDropdown === "about" && (
+                                <div className="absolute left-0 top-full mt-1 w-[400px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                    <div className="space-y-6">
+                                        <div>
                                             <ul className="space-y-3">
-                                                {service.items.map(
-                                                    (item, itemIndex) => (
-                                                        <li key={itemIndex}>
-                                                            <Link
-                                                                href={`/services/${item.name
-                                                                    .toLowerCase()
-                                                                    .replace(
-                                                                        /\s+/g,
-                                                                        "-"
-                                                                    )}`}
-                                                                className="block text-gray-600 hover:text-[#0CB39A] transition-colors group"
-                                                            >
-                                                                <div className="font-medium group-hover:translate-x-1 transition-transform duration-200">
-                                                                    {item.name}
-                                                                </div>
-                                                                <div className="text-sm text-gray-500 mt-1">
-                                                                    {
-                                                                        item.description
-                                                                    }
-                                                                </div>
-                                                            </Link>
-                                                        </li>
-                                                    )
-                                                )}
+                                                <li>
+                                                    <Link
+                                                        href="/about/who-we-are"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Who We Are
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/about/our-vision"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Our Vision
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/about/our-leadership"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Our Leadership
+                                                    </Link>
+                                                </li>
                                             </ul>
                                         </div>
-                                    ))}
+                                    </div>
                                 </div>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                            )}
+                        </div>
+
+                        {/* Services */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter("services")}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <Button
+                                variant="ghost"
+                                className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
+                            >
+                                Services
+                                <ChevronDown className="w-4 h-4" />
+                            </Button>
+                            {openDropdown === "services" && (
+                                <div className="absolute left-0 top-full mt-1 w-[800px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                    <div className="grid grid-cols-2 xl:grid-cols-4 gap-6">
+                                        {services.map((service, index) => (
+                                            <div key={index}>
+                                                <h3 className="text-lg font-bold text-gray-900 mb-4">
+                                                    {service.category}
+                                                </h3>
+                                                <ul className="space-y-3">
+                                                    {service.items.map(
+                                                        (item, itemIndex) => (
+                                                            <li key={itemIndex}>
+                                                                <Link
+                                                                    href={`/services/${item.name
+                                                                        .toLowerCase()
+                                                                        .replace(
+                                                                            /\s+/g,
+                                                                            "-"
+                                                                        )}`}
+                                                                    className="block text-gray-600 hover:text-[#0CB39A] transition-colors group"
+                                                                    onClick={
+                                                                        closeDropdown
+                                                                    }
+                                                                >
+                                                                    <div className="font-medium group-hover:translate-x-1 transition-transform duration-200">
+                                                                        {
+                                                                            item.name
+                                                                        }
+                                                                    </div>
+                                                                    <div className="text-sm text-gray-500 mt-1">
+                                                                        {
+                                                                            item.description
+                                                                        }
+                                                                    </div>
+                                                                </Link>
+                                                            </li>
+                                                        )
+                                                    )}
+                                                </ul>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
 
                         {/* Expertise */}
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button
-                                    variant="ghost"
-                                    className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
-                                >
-                                    Expertise
-                                    <ChevronDown className="w-4 h-4" />
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                                className="w-[900px] p-6"
-                                align="start"
+                        <div
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter("expertise")}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <Button
+                                variant="ghost"
+                                className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
                             >
-                                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                                    {expertiseAreas.map((area, index) => {
-                                        const AreaIcon = area.icon;
-                                        return (
-                                            <Link
-                                                key={index}
-                                                href={`/expertise/${area.name
-                                                    .toLowerCase()
-                                                    .replace(/\s+/g, "-")}`}
-                                                className="group p-3 rounded-lg hover:bg-gray-50 transition-all duration-200"
-                                            >
-                                                <div className="flex items-start gap-3">
-                                                    <div className="w-8 h-8 rounded-lg bg-[#0CB39A]/10 flex items-center justify-center group-hover:bg-[#0CB39A]/20 transition-colors">
-                                                        <AreaIcon className="w-4 h-4 text-[#0CB39A]" />
+                                Expertise
+                                <ChevronDown className="w-4 h-4" />
+                            </Button>
+                            {openDropdown === "expertise" && (
+                                <div className="absolute left-0 top-full mt-1 w-[900px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                    <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                                        {expertiseAreas.map((area, index) => {
+                                            const AreaIcon = area.icon;
+                                            return (
+                                                <Link
+                                                    key={index}
+                                                    href={`/expertise/${area.name
+                                                        .toLowerCase()
+                                                        .replace(/\s+/g, "-")}`}
+                                                    className="group p-3 rounded-lg hover:bg-gray-50 transition-all duration-200"
+                                                    onClick={closeDropdown}
+                                                >
+                                                    <div className="flex items-start gap-3">
+                                                        <div className="w-8 h-8 rounded-lg bg-[#0CB39A]/10 flex items-center justify-center group-hover:bg-[#0CB39A]/20 transition-colors">
+                                                            <AreaIcon className="w-4 h-4 text-[#0CB39A]" />
+                                                        </div>
+                                                        <div>
+                                                            <h4 className="font-semibold text-gray-900 group-hover:text-[#0CB39A] transition-colors text-sm">
+                                                                {area.name}
+                                                            </h4>
+                                                            <p className="text-xs text-gray-600 mt-1">
+                                                                {
+                                                                    area.description
+                                                                }
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div>
-                                                        <h4 className="font-semibold text-gray-900 group-hover:text-[#0CB39A] transition-colors text-sm">
-                                                            {area.name}
-                                                        </h4>
-                                                        <p className="text-xs text-gray-600 mt-1">
-                                                            {area.description}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </Link>
-                                        );
-                                    })}
+                                                </Link>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                            )}
+                        </div>
 
                         {/* Resources */}
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button
-                                    variant="ghost"
-                                    className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
-                                >
-                                    Resources
-                                    <ChevronDown className="w-4 h-4" />
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                                className="w-[500px] p-6"
-                                align="start"
+                        <div
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter("resources")}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <Button
+                                variant="ghost"
+                                className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
                             >
-                                <div className="grid grid-cols-2 gap-6">
-                                    <div>
-                                        <h3 className="text-lg font-bold text-gray-900 mb-4">
-                                            Resource Center
-                                        </h3>
-                                        <ul className="space-y-3">
-                                            <li>
-                                                <Link
-                                                    href="/resources/whitepapers"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    White Papers
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/resources/case-studies"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Case Studies
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/resources/publications"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Publications
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg font-bold text-gray-900 mb-4">
-                                            Training
-                                        </h3>
-                                        <ul className="space-y-3">
-                                            <li>
-                                                <Link
-                                                    href="/resources/training/e-learning"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    E-Learning
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/resources/training/live-training"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Live Training
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/resources/training/webinars"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Webinars
-                                                </Link>
-                                            </li>
-                                        </ul>
+                                Resources
+                                <ChevronDown className="w-4 h-4" />
+                            </Button>
+                            {openDropdown === "resources" && (
+                                <div className="absolute left-0 top-full mt-1 w-[500px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div>
+                                            <h3 className="text-lg font-bold text-gray-900 mb-4">
+                                                Resource Center
+                                            </h3>
+                                            <ul className="space-y-3">
+                                                <li>
+                                                    <Link
+                                                        href="/resources/whitepapers"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        White Papers
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/resources/case-studies"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Case Studies
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/resources/publications"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Publications
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg font-bold text-gray-900 mb-4">
+                                                Training
+                                            </h3>
+                                            <ul className="space-y-3">
+                                                <li>
+                                                    <Link
+                                                        href="/resources/training/e-learning"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        E-Learning
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/resources/training/live-training"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Live Training
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/resources/training/webinars"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Webinars
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                            )}
+                        </div>
 
                         {/* Insights */}
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button
-                                    variant="ghost"
-                                    className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
-                                >
-                                    Insights
-                                    <ChevronDown className="w-4 h-4" />
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                                className="w-[500px] p-6"
-                                align="start"
+                        <div
+                            className="relative"
+                            onMouseEnter={() => handleMouseEnter("insights")}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <Button
+                                variant="ghost"
+                                className="flex items-center gap-1 h-auto p-2 text-gray-700 hover:text-[#0CB39A] hover:bg-transparent"
                             >
-                                <div className="grid grid-cols-2 gap-6">
-                                    <div>
-                                        <h3 className="text-lg font-bold text-gray-900 mb-4">
-                                            Latest Updates
-                                        </h3>
-                                        <ul className="space-y-3">
-                                            <li>
-                                                <Link
-                                                    href="/insights/news"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    News
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/insights/events"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Events
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/insights/blog"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Blog
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg font-bold text-gray-900 mb-4">
-                                            Industry Insights
-                                        </h3>
-                                        <ul className="space-y-3">
-                                            <li>
-                                                <Link
-                                                    href="/insights/trends"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Industry Trends
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/insights/research"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Research Highlights
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link
-                                                    href="/insights/thought-leadership"
-                                                    className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
-                                                >
-                                                    Thought Leadership
-                                                </Link>
-                                            </li>
-                                        </ul>
+                                Insights
+                                <ChevronDown className="w-4 h-4" />
+                            </Button>
+                            {openDropdown === "insights" && (
+                                <div className="absolute left-0 top-full mt-1 w-[500px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div>
+                                            <h3 className="text-lg font-bold text-gray-900 mb-4">
+                                                Latest Updates
+                                            </h3>
+                                            <ul className="space-y-3">
+                                                <li>
+                                                    <Link
+                                                        href="/insights/news"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        News
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/insights/events"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Events
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/insights/blog"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Blog
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg font-bold text-gray-900 mb-4">
+                                                Industry Insights
+                                            </h3>
+                                            <ul className="space-y-3">
+                                                <li>
+                                                    <Link
+                                                        href="/insights/trends"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Industry Trends
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/insights/research"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Research Highlights
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link
+                                                        href="/insights/thought-leadership"
+                                                        className="text-gray-600 hover:text-[#0CB39A] transition-colors block"
+                                                        onClick={closeDropdown}
+                                                    >
+                                                        Thought Leadership
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                            )}
+                        </div>
                     </div>
 
                     {/* CTA Button */}

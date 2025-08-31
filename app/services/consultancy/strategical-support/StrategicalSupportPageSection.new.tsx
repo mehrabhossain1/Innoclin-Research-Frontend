@@ -1,5 +1,3 @@
-"use client";
-
 import { Brain, Target, TrendingUp, Zap } from "lucide-react";
 import ServiceTemplate from "@/components/ServiceTemplate";
 

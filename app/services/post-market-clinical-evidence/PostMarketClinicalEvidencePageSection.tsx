@@ -1,104 +1,84 @@
-import Image from "next/image";
+"use client";
+
+import { TrendingUp, Shield, Users, BarChart3 } from "lucide-react";
+import ServiceTemplate from "@/components/ServiceTemplate";
 
 export default function PostMarketClinicalEvidencePageSection() {
+    const features = [
+        {
+            icon: TrendingUp,
+            title: "Real-World Evidence",
+            description:
+                "Demonstrating long-term safety and effectiveness in diverse populations",
+        },
+        {
+            icon: Shield,
+            title: "Safety Surveillance",
+            description:
+                "Comprehensive post-market safety monitoring and assessment",
+        },
+        {
+            icon: Users,
+            title: "Patient Outcomes",
+            description: "Real-world data collection and outcomes measurement",
+        },
+        {
+            icon: BarChart3,
+            title: "Value Demonstration",
+            description:
+                "Health economics and market access evidence generation",
+        },
+    ];
+
+    const sections = [
+        {
+            title: "Proving Value Beyond Approval",
+            content: [
+                "At Innoclin Research, we understand that regulatory approval is not the end of a therapy's journey—it's the beginning. Our Post-Market Clinical Evidence services are designed to demonstrate long-term safety, effectiveness, and real-world value, ensuring continued success for your product in diverse patient populations.",
+                "From Phase IV studies to registry-based research, we design and execute post-market programs that address regulatory requirements while generating commercially valuable insights. Our approach combines rigorous methodology with practical feasibility, delivering evidence that satisfies both scientific standards and business objectives.",
+                "With our post-market expertise, you can confidently navigate the complexities of real-world evidence generation, ensuring that your therapy continues to demonstrate value long after initial approval.",
+            ],
+            background: "white" as const,
+            image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        },
+        {
+            title: "From Market Entry to Market Leadership",
+            content: [
+                "Post-market clinical evidence is essential for maintaining competitive advantage and ensuring long-term commercial success. Our comprehensive approach addresses safety surveillance, effectiveness confirmation, and value demonstration across diverse real-world settings.",
+                "We specialize in designing studies that leverage existing healthcare infrastructure while generating high-quality evidence. Our programs capture the complexity of real-world treatment patterns, patient heterogeneity, and healthcare delivery variations that define actual clinical practice.",
+                "By partnering with us, you transform post-market obligations into strategic opportunities, generating evidence that strengthens market position and expands therapeutic utility.",
+            ],
+            background: "gradient" as const,
+        },
+        {
+            title: "Real-World Impact, Real-World Evidence",
+            content: [
+                "The true measure of therapeutic success lies in real-world impact. Our Post-Market Clinical Evidence services focus on capturing and quantifying this impact through robust study designs and comprehensive data collection strategies.",
+                "We develop evidence generation plans that address multiple stakeholder needs—from regulatory authorities requiring safety updates to payers demanding economic justification. Our approach ensures that every study contributes to a comprehensive understanding of your therapy's value proposition.",
+                "Through systematic post-market research, we help sponsors build compelling evidence portfolios that support label expansions, reimbursement negotiations, and continued market access across global healthcare systems.",
+            ],
+            background: "white" as const,
+        },
+    ];
+
+    const benefits = [
+        "Phase IV study design and execution",
+        "Real-world evidence generation",
+        "Safety surveillance programs",
+        "Registry and cohort studies",
+        "Health economics research",
+        "Market access evidence",
+    ];
+
     return (
-        <section className="bg-primary/20 py-24 px-6">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
-                {/* Left Column */}
-                <div className="lg:col-span-2 space-y-16">
-                    {/* Extensive Experience */}
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-primary">
-                            Proving Value Beyond Approval
-                        </h2>
-                        <p className="text-lg leading-relaxed mb-6">
-                            At <b>Innoclin Research,</b> we understand that
-                            regulatory approval is not the end of a therapy’s
-                            journey it’s the beginning. Our{" "}
-                            <b>Post-Market Clinical Evidence services</b> are
-                            designed to demonstrate long-term safety,
-                            effectiveness, and real-world value, ensuring
-                            continued success for your product in diverse
-                            patient populations.
-                        </p>
-
-                        {/* Image between descriptions */}
-                        <div className="w-full h-72 relative rounded-2xl overflow-hidden shadow-md mb-6">
-                            <Image
-                                src="https://www.caidya.com/wp-content/uploads/2022/09/Cardiology-2-2048x1366.jpg" // replace with real image
-                                alt="Neuroscience research"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-
-                        <p className="text-lg leading-relaxed mb-6">
-                            Through carefully designed Phase IV studies,
-                            real-world evidence (RWE) programs, and long-term
-                            safety surveillance, we generate insights that build
-                            trust among regulators, clinicians, and patients.
-                            These insights not only fulfill regulatory
-                            requirements but also support expanded indications,
-                            reimbursement strategies, and stronger adoption in
-                            clinical practice.
-                        </p>
-                        <p className="text-lg leading-relaxed mb-6">
-                            By partnering with Innoclin Research, you can be
-                            confident that your therapy’s value is continually
-                            validated and strengthened in the marketplace.
-                        </p>
-                    </div>
-
-                    {/* Accelerate Trial Start-up */}
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-primary">
-                            Real-World Insights for Real-World Impact
-                        </h2>
-                        <p className="text-lg leading-relaxed mb-6">
-                            While clinical trials provide controlled evidence,
-                            post-market studies reveal how therapies perform in
-                            everyday medical practice. Our team leverages
-                            observational studies, registry analyses, and
-                            patient-reported outcomes to capture real-world data
-                            that matters.
-                        </p>
-                        <p className="text-lg leading-relaxed mb-6">
-                            This evidence helps sponsors understand treatment
-                            adherence, identify rare adverse events, and assess
-                            long-term outcomes across varied populations. These
-                            insights empower better clinical decision-making,
-                            improve patient care, and strengthen the case for
-                            market expansion.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-primary">
-                            Extending Confidence from Trial to Treatment
-                        </h2>
-                        <p className="text-lg leading-relaxed mb-4">
-                            At Innoclin Research, we bridge the gap between
-                            clinical trial results and real-world practice. Our
-                            post-market evidence strategies provide sponsors
-                            with the confidence that their therapies continue to
-                            deliver value, safety, and effectiveness well beyond
-                            approval.
-                        </p>
-                        <p className="text-lg leading-relaxed mb-4">
-                            We integrate advanced analytics, patient-centric
-                            outcomes, and pharmacovigilance systems to ensure
-                            that your product remains trusted, competitive, and
-                            impactful in the healthcare ecosystem. With Innoclin
-                            Research, your therapy’s story continues—supported
-                            by evidence that lasts.
-                        </p>
-                    </div>
-
-                    {/* Insight-driven collaboration  */}
-                </div>
-
-                {/* Right Column - Sticky Related Expertise */}
-            </div>
-        </section>
+        <ServiceTemplate
+            serviceName="Post-Market Clinical Evidence"
+            serviceIcon={TrendingUp}
+            heroTitle="Demonstrating Real-World Value Beyond Approval"
+            heroSubtitle="Generate compelling post-market evidence that proves long-term safety, effectiveness, and value in real-world clinical practice."
+            sections={sections}
+            features={features}
+            benefits={benefits}
+        />
     );
 }

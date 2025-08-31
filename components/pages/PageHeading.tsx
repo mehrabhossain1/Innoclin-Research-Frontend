@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { ChevronDown, ArrowRight, Star } from "lucide-react";
 
@@ -26,14 +26,14 @@ export default function PageHeading({
     stats,
 }: PageHeadingProps) {
     const scrollToNextSection = () => {
-        const nextSection = document.querySelector('section:nth-of-type(2)');
+        const nextSection = document.querySelector("section:nth-of-type(2)");
         if (nextSection) {
-            nextSection.scrollIntoView({ behavior: 'smooth' });
+            nextSection.scrollIntoView({ behavior: "smooth" });
         }
     };
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+        <section className="relative min-h-[60vh] flex items-center justify-center text-white overflow-hidden">
             {/* Background Image */}
             {bgImage && (
                 <div className="absolute inset-0 z-0">
@@ -58,16 +58,51 @@ export default function PageHeading({
 
             {/* Decorative SVG Lines */}
             <div className="absolute inset-0 z-0">
-                <svg className="w-full h-full" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                    className="w-full h-full"
+                    viewBox="0 0 1200 800"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
                     <defs>
-                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#0CB39A" stopOpacity="0.3" />
-                            <stop offset="50%" stopColor="#0A9B85" stopOpacity="0.2" />
-                            <stop offset="100%" stopColor="#089B7A" stopOpacity="0.1" />
+                        <linearGradient
+                            id="lineGradient"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%"
+                        >
+                            <stop
+                                offset="0%"
+                                stopColor="#0CB39A"
+                                stopOpacity="0.3"
+                            />
+                            <stop
+                                offset="50%"
+                                stopColor="#0A9B85"
+                                stopOpacity="0.2"
+                            />
+                            <stop
+                                offset="100%"
+                                stopColor="#089B7A"
+                                stopOpacity="0.1"
+                            />
                         </linearGradient>
                     </defs>
-                    <path d="M0 200 Q300 100 600 200 T1200 200" stroke="url(#lineGradient)" strokeWidth="2" fill="none" className="animate-pulse" />
-                    <path d="M0 600 Q300 500 600 600 T1200 600" stroke="url(#lineGradient)" strokeWidth="2" fill="none" className="animate-pulse delay-1000" />
+                    <path
+                        d="M0 200 Q300 100 600 200 T1200 200"
+                        stroke="url(#lineGradient)"
+                        strokeWidth="2"
+                        fill="none"
+                        className="animate-pulse"
+                    />
+                    <path
+                        d="M0 600 Q300 500 600 600 T1200 600"
+                        stroke="url(#lineGradient)"
+                        strokeWidth="2"
+                        fill="none"
+                        className="animate-pulse delay-1000"
+                    />
                 </svg>
             </div>
 
@@ -79,7 +114,9 @@ export default function PageHeading({
                         <ol className="flex items-center space-x-2">
                             {breadcrumbs.map((crumb, index) => (
                                 <li key={index} className="flex items-center">
-                                    {index > 0 && <ChevronDown className="w-4 h-4 rotate-[-90deg] text-slate-400 mx-2" />}
+                                    {index > 0 && (
+                                        <ChevronDown className="w-4 h-4 rotate-[-90deg] text-slate-400 mx-2" />
+                                    )}
                                     {crumb.href ? (
                                         <a
                                             href={crumb.href}
@@ -88,7 +125,9 @@ export default function PageHeading({
                                             {crumb.name}
                                         </a>
                                     ) : (
-                                        <span className="text-[#0CB39A] font-medium">{crumb.name}</span>
+                                        <span className="text-[#0CB39A] font-medium">
+                                            {crumb.name}
+                                        </span>
                                     )}
                                 </li>
                             ))}
@@ -151,8 +190,12 @@ export default function PageHeading({
                                     )}
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                                    <div className="text-slate-300 text-sm">{stat.label}</div>
+                                    <div className="text-3xl font-bold text-white mb-2">
+                                        {stat.value}
+                                    </div>
+                                    <div className="text-slate-300 text-sm">
+                                        {stat.label}
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -183,7 +226,9 @@ export default function PageHeading({
                         onClick={scrollToNextSection}
                         className="flex flex-col items-center gap-2 text-slate-300 hover:text-[#0CB39A] transition-colors cursor-pointer group"
                     >
-                        <span className="text-sm font-medium">Scroll to explore</span>
+                        <span className="text-sm font-medium">
+                            Scroll to explore
+                        </span>
                         <div className="w-6 h-10 border-2 border-slate-300 group-hover:border-[#0CB39A] rounded-full flex justify-center">
                             <div className="w-1 h-3 bg-slate-300 group-hover:bg-[#0CB39A] rounded-full mt-2 animate-bounce"></div>
                         </div>

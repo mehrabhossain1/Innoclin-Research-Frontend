@@ -70,18 +70,21 @@ export default function TheInnoclinResearchDifferenceSection() {
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Enhanced Heading */}
                 <div className="text-center mb-20">
-                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
-                        Why Choose Innoclin Research
-                    </div>
-                    <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 bg-clip-text text-transparent leading-tight">
-                        The Innoclin Research
-                        <br />
-                        <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                            Difference
+                    <div className="flex items-center justify-center gap-3 mb-8">
+                        <div className="h-[2px] w-16 bg-gradient-to-r from-[#0CB39A] to-[#0A9B85] rounded-full"></div>
+                        <span className="uppercase tracking-[0.2em] text-sm font-semibold text-[#0CB39A] bg-[#0CB39A]/10 backdrop-blur-sm px-4 py-2 rounded-full border border-[#0CB39A]/20">
+                            Why Choose Us
                         </span>
+                        <div className="h-[2px] w-16 bg-gradient-to-r from-[#0A9B85] to-[#0CB39A] rounded-full"></div>
+                    </div>
+                    <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight text-gray-900">
+                        The{" "}
+                        <span className="bg-gradient-to-r from-[#0CB39A] via-[#0A9B85] to-[#089B7A] bg-clip-text text-transparent">
+                            Innoclin Research
+                        </span>{" "}
+                        Difference
                     </h2>
-                    <p className="mt-6 text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                         What sets us apart is our commitment to precision,
                         transparency, and dedicated partnership throughout every
                         project milestone.
@@ -146,9 +149,9 @@ export default function TheInnoclinResearchDifferenceSection() {
 
                 {/* Call to Action */}
                 <div className="text-center mt-16">
-                    <button className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-                        Experience the Difference
-                        <Rocket className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    <button className="group inline-flex items-center gap-3 bg-[#0CB39A] hover:bg-[#0A9B85] text-white font-bold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                        <span>Experience the Difference</span>
+                        <Rocket className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </button>
                 </div>
             </div>

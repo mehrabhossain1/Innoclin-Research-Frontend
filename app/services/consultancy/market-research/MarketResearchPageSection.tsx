@@ -1,105 +1,83 @@
-import Image from "next/image";
+"use client";
+
+import { TrendingUp, Search, Target, BarChart3 } from "lucide-react";
+import ServiceTemplate from "@/components/ServiceTemplate";
 
 export default function MarketResearchPageSection() {
+    const features = [
+        {
+            icon: Search,
+            title: "Deep Market Analysis",
+            description:
+                "Comprehensive insights into patient populations and therapeutic landscapes",
+        },
+        {
+            icon: Target,
+            title: "Strategic Positioning",
+            description:
+                "Identifying optimal market opportunities and competitive advantages",
+        },
+        {
+            icon: BarChart3,
+            title: "Data-Driven Insights",
+            description: "Quantitative and qualitative research methodologies",
+        },
+        {
+            icon: TrendingUp,
+            title: "Market Intelligence",
+            description: "Real-time market trends and forecasting capabilities",
+        },
+    ];
+
+    const sections = [
+        {
+            title: "Insights That Drive Smarter Clinical Decisions",
+            content: [
+                "At Innoclin Research, we know that strong clinical outcomes start with strong market understanding. Our Market Research services provide sponsors with deep insights into patient populations, competitive landscapes, and therapeutic opportunities—helping you design studies that are not only scientifically sound but also strategically aligned with market needs.",
+                "From early-stage opportunity assessment to late-phase commercialization planning, our research capabilities span the entire product lifecycle. We combine traditional market research methodologies with cutting-edge analytics to deliver actionable intelligence that informs every aspect of your clinical strategy.",
+                "Whether you're exploring a new therapeutic area or positioning for market entry, our insights give you the confidence to make informed decisions that accelerate development timelines and maximize commercial potential.",
+            ],
+            background: "white" as const,
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        },
+        {
+            title: "From Market Gaps to Market Leadership",
+            content: [
+                "Understanding the market landscape is critical to clinical success. Our Market Research team specializes in identifying unmet medical needs, analyzing competitive dynamics, and uncovering patient insights that drive breakthrough innovations.",
+                "We leverage both primary and secondary research methodologies to provide comprehensive market intelligence. Our approach combines physician interviews, patient surveys, claims data analysis, and competitive intelligence to paint a complete picture of your therapeutic landscape.",
+                "By aligning clinical development with market realities, we help sponsors optimize their programs for both regulatory success and commercial viability.",
+            ],
+            background: "gradient" as const,
+        },
+        {
+            title: "Strategic Intelligence for Every Phase",
+            content: [
+                "Market research isn't just about understanding what exists—it's about uncovering what's possible. Our team delivers strategic intelligence that spans from early opportunity assessment through post-market surveillance.",
+                "We provide critical insights into patient journey mapping, treatment paradigms, pricing strategies, and market access considerations. This comprehensive understanding enables sponsors to design studies that address real-world needs and position products for optimal market reception.",
+                "With Innoclin Research, your market research becomes a strategic asset that guides decision-making, reduces development risks, and accelerates paths to market success.",
+            ],
+            background: "white" as const,
+        },
+    ];
+
+    const benefits = [
+        "Comprehensive market landscape analysis",
+        "Patient population insights and segmentation",
+        "Competitive intelligence and positioning",
+        "Unmet medical need identification",
+        "Commercial viability assessments",
+        "Strategic market entry planning",
+    ];
+
     return (
-        <section className="bg-primary/20 py-24 px-6">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
-                {/* Left Column */}
-                <div className="lg:col-span-2 space-y-16">
-                    {/* Extensive Experience */}
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-primary">
-                            Insights That Drive Smarter Clinical Decisions
-                        </h2>
-                        <p className="text-lg leading-relaxed mb-6">
-                            At <b>Innoclin Research,</b> we know that strong
-                            clinical outcomes start with strong market
-                            understanding. Our <b>Market Research services</b>{" "}
-                            provide sponsors with deep insights into patient
-                            populations, competitive landscapes, and therapeutic
-                            opportunities helping you design studies that are
-                            not only scientifically sound but also strategically
-                            aligned with market needs.
-                        </p>
-
-                        {/* Image between descriptions */}
-                        <div className="w-full h-72 relative rounded-2xl overflow-hidden shadow-md mb-6">
-                            <Image
-                                src="https://www.caidya.com/wp-content/uploads/2022/09/Cardiology-2-2048x1366.jpg" // replace with real image
-                                alt="Neuroscience research"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-
-                        <p className="text-lg leading-relaxed mb-6">
-                            We combine data analytics with real-world
-                            intelligence, mapping out trends, patient access
-                            barriers, and physician perspectives. This ensures
-                            that your development strategy is grounded in
-                            evidence and positioned to succeed in today’s
-                            competitive environment.
-                        </p>
-                        <p className="text-lg leading-relaxed mb-6">
-                            With Innoclin Research as your partner, market
-                            research becomes more than data collection it
-                            becomes a strategic advantage, guiding decisions
-                            that accelerate trial recruitment, regulatory
-                            success, and eventual adoption in the marketplace.
-                        </p>
-                    </div>
-
-                    {/* Accelerate Trial Start-up */}
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-primary">
-                            Turning Data Into Development Opportunities
-                        </h2>
-                        <p className="text-lg leading-relaxed mb-6">
-                            Every new therapy exists within a larger ecosystem
-                            of patients, providers, and competitors. Our Market
-                            Research services are designed to help you
-                            understand this ecosystem fully. We deliver targeted
-                            insights that identify unmet needs, patient journey
-                            dynamics, and clinical adoption drivers.
-                        </p>
-                        <p className="text-lg leading-relaxed mb-6">
-                            By integrating these insights into study planning,
-                            sponsors can anticipate recruitment challenges,
-                            refine inclusion criteria, and position their
-                            therapies more effectively. Our approach ensures
-                            that your research is not only clinically impactful
-                            but also commercially viable.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h2 className="text-3xl font-semibold mb-6 text-primary">
-                            From Market Insight to Patient Impact
-                        </h2>
-                        <p className="text-lg leading-relaxed mb-4">
-                            At Innoclin Research, we bridge the gap between
-                            clinical development and real-world impact. Our
-                            Market Research services empower sponsors with a
-                            360° view of the therapeutic landscape, allowing you
-                            to design studies that resonate with patients,
-                            providers, and regulators alike.
-                        </p>
-                        <p className="text-lg leading-relaxed mb-4">
-                            We don’t just provide reports we deliver actionable
-                            intelligence. From competitive benchmarking to
-                            patient access mapping, our team translates insights
-                            into strategies that directly influence study design
-                            and long-term success. By putting evidence into
-                            action, we help sponsors bring therapies to the
-                            right patients at the right time.
-                        </p>
-                    </div>
-
-                    {/* Insight-driven collaboration  */}
-                </div>
-
-                {/* Right Column - Sticky Related Expertise */}
-            </div>
-        </section>
+        <ServiceTemplate
+            serviceName="Market Research"
+            serviceIcon={TrendingUp}
+            heroTitle="Strategic Market Intelligence for Clinical Success"
+            heroSubtitle="Transform market insights into competitive advantages with comprehensive research that guides clinical development and commercial strategy."
+            sections={sections}
+            features={features}
+            benefits={benefits}
+        />
     );
 }
