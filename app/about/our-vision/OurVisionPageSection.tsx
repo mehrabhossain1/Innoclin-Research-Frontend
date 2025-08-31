@@ -3,7 +3,6 @@
 import {
     Eye,
     Star,
-    Users,
     Award,
     Lightbulb,
     Heart,
@@ -213,7 +212,7 @@ export default function OurVisionPageSection() {
                         </h2>
                         <p className="text-lg text-gray-700 leading-relaxed mb-8">
                             As we work toward our vision, we remain committed to
-                            pushing the boundaries of what's possible in
+                            pushing the boundaries of what&apos;s possible in
                             clinical research. Our goal is not just to meet
                             industry standards, but to set new ones that benefit
                             patients, sponsors, and the broader healthcare

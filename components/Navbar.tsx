@@ -1,15 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
     ChevronDown,
-    ArrowRight,
-    Users,
-    Target,
-    FileText,
-    Award,
     Brain,
     Heart,
     Eye,
@@ -25,18 +19,10 @@ import {
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuItem,
     DropdownMenuTrigger,
     DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
 import Logo from "@/assets/Logo.png";
 
 export default function Navbar() {

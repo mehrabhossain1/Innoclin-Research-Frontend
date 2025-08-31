@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaLinkedin, FaInstagram, FaTwitter, FaFacebook, FaMapMarkerAlt, FaPhone, FaEnvelope, FaGlobe } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import { ArrowRight, Mail, Phone, MapPin, Globe } from "lucide-react";
 import Logo from "@/assets/Logo.png";
 
