@@ -324,22 +324,26 @@ export default function AdminDashboard() {
   );
 
   async function handleDeleteBlog(blogId: string) {
-    if (confirm('Are you sure you want to delete this blog post?')) {
-      try {
-        const response = await fetch(`/api/admin/blogs/${blogId}`, {
-          method: 'DELETE',
-        });
+    if (!confirm('Are you sure you want to delete this blog post? This action cannot be undone.')) {
+      return;
+    }
 
-        if (response.ok) {
-          fetchBlogs();
-          fetchStats();
-        } else {
-          alert('Failed to delete blog post');
-        }
-      } catch (error) {
-        console.error('Error deleting blog:', error);
-        alert('Error deleting blog post');
+    try {
+      const response = await fetch(`/api/admin/blogs/${blogId}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Failed to delete blog post');
       }
+
+      alert('Blog post deleted successfully!');
+      fetchBlogs();
+      fetchStats();
+    } catch (error: any) {
+      console.error('Error deleting blog:', error);
+      alert(error.message || 'Error deleting blog post');
     }
   }
 }
