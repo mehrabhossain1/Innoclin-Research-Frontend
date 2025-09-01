@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -28,16 +28,44 @@ import Logo from "@/assets/Logo.png";
 
 export default function Navbar() {
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const handleMouseEnter = (dropdown: string) => {
+        // Clear any existing timeout
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+        }
         setOpenDropdown(dropdown);
     };
 
     const handleMouseLeave = () => {
-        setOpenDropdown(null);
+        // Set a timeout to close the dropdown after 300ms
+        timeoutRef.current = setTimeout(() => {
+            setOpenDropdown(null);
+        }, 300);
+    };
+
+    const handleDropdownMouseEnter = () => {
+        // Clear the timeout when hovering over the dropdown content
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+        }
+    };
+
+    const handleDropdownMouseLeave = () => {
+        // Set a timeout to close the dropdown after 300ms
+        timeoutRef.current = setTimeout(() => {
+            setOpenDropdown(null);
+        }, 300);
     };
 
     const closeDropdown = () => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+        }
         setOpenDropdown(null);
     };
     const expertiseAreas = [
@@ -216,7 +244,11 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "about" && (
-                                <div className="absolute left-0 top-full mt-1 w-[400px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                <div 
+                                    className="absolute left-0 top-full mt-1 w-[400px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                                    onMouseEnter={handleDropdownMouseEnter}
+                                    onMouseLeave={handleDropdownMouseLeave}
+                                >
                                     <div className="space-y-6">
                                         <div>
                                             <ul className="space-y-3">
@@ -268,7 +300,11 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "services" && (
-                                <div className="absolute left-0 top-full mt-1 w-[800px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                <div 
+                                    className="absolute left-0 top-full mt-1 w-[800px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                                    onMouseEnter={handleDropdownMouseEnter}
+                                    onMouseLeave={handleDropdownMouseLeave}
+                                >
                                     <div className="grid grid-cols-2 xl:grid-cols-4 gap-6">
                                         {services.map((service, index) => (
                                             <div key={index}>
@@ -327,7 +363,11 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "expertise" && (
-                                <div className="absolute left-0 top-full mt-1 w-[900px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                <div 
+                                    className="absolute left-0 top-full mt-1 w-[900px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                                    onMouseEnter={handleDropdownMouseEnter}
+                                    onMouseLeave={handleDropdownMouseLeave}
+                                >
                                     <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                                         {expertiseAreas.map((area, index) => {
                                             const AreaIcon = area.icon;
@@ -377,7 +417,11 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "resources" && (
-                                <div className="absolute left-0 top-full mt-1 w-[500px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                <div 
+                                    className="absolute left-0 top-full mt-1 w-[500px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                                    onMouseEnter={handleDropdownMouseEnter}
+                                    onMouseLeave={handleDropdownMouseLeave}
+                                >
                                     <div className="grid grid-cols-2 gap-6">
                                         <div>
                                             <h3 className="text-lg font-bold text-gray-900 mb-4">
@@ -466,7 +510,11 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "insights" && (
-                                <div className="absolute left-0 top-full mt-1 w-[500px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                                <div 
+                                    className="absolute left-0 top-full mt-1 w-[500px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+                                    onMouseEnter={handleDropdownMouseEnter}
+                                    onMouseLeave={handleDropdownMouseLeave}
+                                >
                                     <div className="grid grid-cols-2 gap-6">
                                         <div>
                                             <h3 className="text-lg font-bold text-gray-900 mb-4">
