@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-// Import models to ensure they are registered
-require('../models/User');
-require('../models/Blog');
-
 // MongoDB connection
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://innoclin-prod:UtOpYbUDfVjlqpfR@cluster0.mljzuyv.mongodb.net/innoclin-research?retryWrites=true&w=majority&appName=Cluster0';
 
