@@ -302,7 +302,7 @@ export default function RespiratoryDiseasesPageSection() {
                                 <CardContent className="p-6 text-center">
                                     <h3 className="text-xl font-bold mb-3">Ready to Breathe Better?</h3>
                                     <p className="text-sm opacity-90 mb-4">
-                                        Let's discuss your respiratory clinical research needs.
+                                        Let&apos;s discuss your respiratory clinical research needs.
                                     </p>
                                     <button className="w-full bg-white text-blue-600 font-semibold py-3 px-6 rounded-xl hover:bg-gray-100 transition-colors duration-200">
                                         Get in Touch

@@ -225,7 +225,7 @@ export default function PediatricsPageSection() {
                                 <CardContent className="p-6 text-center">
                                     <h3 className="text-xl font-bold mb-3">Ready to Start?</h3>
                                     <p className="text-sm opacity-90 mb-4">
-                                        Let's discuss how we can support your pediatric clinical research needs.
+                                        Let&apos;s discuss how we can support your pediatric clinical research needs.
                                     </p>
                                     <button className="w-full bg-white text-blue-600 font-semibold py-3 px-6 rounded-xl hover:bg-gray-100 transition-colors duration-200">
                                         Get in Touch
