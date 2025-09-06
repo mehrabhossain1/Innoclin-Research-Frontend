@@ -1,6 +1,6 @@
 "use client";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
-import { ChevronDown, ArrowRight, Star } from "lucide-react";
 
 interface PageHeadingProps {
     title: string;
@@ -175,7 +175,7 @@ export default function PageHeading({
                 </div>
 
                 {/* Stats Section */}
-                {stats && stats.length > 0 && (
+                {/* {stats && stats.length > 0 && (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                         {stats.map((stat, index) => (
                             <div
@@ -200,10 +200,10 @@ export default function PageHeading({
                             </div>
                         ))}
                     </div>
-                )}
+                )} */}
 
                 {/* Trust Indicators */}
-                <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-slate-400">
+                {/* <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-slate-400">
                     <div className="flex items-center gap-2">
                         <Star className="w-4 h-4 text-[#0CB39A]" />
                         <span>500+ Successful Trials</span>
@@ -216,11 +216,11 @@ export default function PageHeading({
                         <Star className="w-4 h-4 text-[#0CB39A]" />
                         <span>Patient-Centric Approach</span>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* Scroll Indicator */}
-            {showScrollIndicator && (
+            {/* {showScrollIndicator && (
                 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
                     <button
                         onClick={scrollToNextSection}
@@ -234,7 +234,7 @@ export default function PageHeading({
                         </div>
                     </button>
                 </div>
-            )}
+            )} */}
         </section>
     );
 }
