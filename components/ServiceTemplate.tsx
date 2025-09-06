@@ -162,11 +162,11 @@ export default function ServiceTemplate({
                                         )
                                     )}
 
-                                    {section.image && index === 0 && (
+                                    {section.image && (
                                         <div className="relative rounded-2xl overflow-hidden shadow-lg mb-8 group">
                                             <Image
                                                 src={section.image}
-                                                alt={serviceName}
+                                                alt={`${serviceName} - ${section.title}`}
                                                 width={800}
                                                 height={400}
                                                 className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"

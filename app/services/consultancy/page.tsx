@@ -8,7 +8,7 @@ export default function ConsultancyPage() {
             <PageHeading
                 title="Consultancy"
                 subtitle=""
-                bgImage="https://img.freepik.com/premium-photo/digital-brain-concept-cosmic-background_98396-118211.jpg?w=1480"
+                bgImage="https://img.freepik.com/free-photo/businessman-showing-changes-report_1098-3504.jpg"
             />
 
             {/* Intro Section */}
