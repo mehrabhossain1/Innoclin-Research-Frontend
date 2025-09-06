@@ -1,20 +1,18 @@
 import PageHeading from "@/components/pages/PageHeading";
 import PostMarketClinicalEvidencePageSection from "./PostMarketClinicalEvidencePageSection";
 
-export default function MedicalWritingtPage() {
+export default function PostMarketClinicalEvidence() {
     return (
         <main className="flex flex-col">
             {/* Hero Section */}
             <PageHeading
                 title="Post-Market Clinical Evidence"
                 subtitle=""
-                bgImage="https://img.freepik.com/premium-photo/digital-brain-concept-cosmic-background_98396-118211.jpg?w=1480"
+                bgImage="https://img.freepik.com/free-photo/happy-businessman-with-face-mask-analyzing-chart-video-call-home_637285-12753.jpg"
             />
 
-            {/* Intro Section */}
-
+            {/* Main Content Section */}
             <PostMarketClinicalEvidencePageSection />
-            {/* <ContactUsSection /> */}
         </main>
     );
 }
