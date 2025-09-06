@@ -1,5 +1,5 @@
 import PageHeading from "@/components/pages/PageHeading";
-import MedicalWritingPage from "./MedicalWritingPage";
+import MedicalWritingPageSection from "./MedicalWritingPageSection";
 
 export default function MedicalWritingtPage() {
     return (
@@ -8,13 +8,11 @@ export default function MedicalWritingtPage() {
             <PageHeading
                 title="Medical Writing"
                 subtitle=""
-                bgImage="https://img.freepik.com/premium-photo/digital-brain-concept-cosmic-background_98396-118211.jpg?w=1480"
+                bgImage="https://img.freepik.com/free-photo/close-up-doctor-writing_23-2148868180.jpg"
             />
 
-            {/* Intro Section */}
-
-            <MedicalWritingPage />
-            {/* <ContactUsSection /> */}
+            {/* Main Content Section */}
+            <MedicalWritingPageSection />
         </main>
     );
 }
