@@ -6,15 +6,13 @@ export default function ClinicalAssessmentPage() {
         <main className="flex flex-col">
             {/* Hero Section */}
             <PageHeading
-                title="Clinical Assessment, Training & Surveillance"
+                title="Clinical Assessment Training & Surveillance"
                 subtitle=""
-                bgImage="https://img.freepik.com/premium-photo/digital-brain-concept-cosmic-background_98396-118211.jpg?w=1480"
+                bgImage="https://img.freepik.com/free-photo/doctor-giving-presentation-team-interim-doctors_107420-84781.jpg"
             />
 
-            {/* Intro Section */}
-
+            {/* Main Content Section */}
             <ClinicalAssessmentPageSection />
-            {/* <ContactUsSection /> */}
         </main>
     );
 }

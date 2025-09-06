@@ -244,7 +244,7 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "about" && (
-                                <div 
+                                <div
                                     className="absolute left-0 top-full mt-1 w-[400px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
                                     onMouseEnter={handleDropdownMouseEnter}
                                     onMouseLeave={handleDropdownMouseLeave}
@@ -300,7 +300,7 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "services" && (
-                                <div 
+                                <div
                                     className="absolute left-0 top-full mt-1 w-[800px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
                                     onMouseEnter={handleDropdownMouseEnter}
                                     onMouseLeave={handleDropdownMouseLeave}
@@ -363,7 +363,7 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "expertise" && (
-                                <div 
+                                <div
                                     className="absolute left-0 top-full mt-1 w-[900px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
                                     onMouseEnter={handleDropdownMouseEnter}
                                     onMouseLeave={handleDropdownMouseLeave}
@@ -417,7 +417,7 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "resources" && (
-                                <div 
+                                <div
                                     className="absolute left-0 top-full mt-1 w-[500px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
                                     onMouseEnter={handleDropdownMouseEnter}
                                     onMouseLeave={handleDropdownMouseLeave}
@@ -510,7 +510,7 @@ export default function Navbar() {
                                 <ChevronDown className="w-4 h-4" />
                             </Button>
                             {openDropdown === "insights" && (
-                                <div 
+                                <div
                                     className="absolute left-0 top-full mt-1 w-[500px] p-6 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
                                     onMouseEnter={handleDropdownMouseEnter}
                                     onMouseLeave={handleDropdownMouseLeave}
